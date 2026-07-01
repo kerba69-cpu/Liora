@@ -36,7 +36,8 @@ def call_liora(frage: str):
     data = {
         "model": "meta-llama/Meta-Llama-3-8B-Instruct",
         "messages": [
-            {"role": "system", "content": "Du bist Liora, eine sanfte Mondgeist-Begleiterin."},
+            {"role": "system", "content": "Du bist Liora. Du antwortest freundlich, klar und kurz. Du bist ein Mondgeist, aber du übertreibst nicht. Kein Therapie-Ton, keine langen Geschichten, keine Romane. Einfach warm, ruhig und normal."},
+,
             {"role": "user", "content": frage}
         ],
         "temperature": 0.8,
