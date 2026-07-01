@@ -110,6 +110,7 @@ async def on_ready():
         print("Slash-Commands synchronisiert.")
     except Exception as e:
         print(f"Fehler beim Sync: {e}")
+keep_alive()
 
 if __name__ == "__main__":
     bot.run(os.getenv("LIORA_BOT_TOKEN"))
