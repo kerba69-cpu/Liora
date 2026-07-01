@@ -3,6 +3,25 @@ import discord
 from discord.ext import commands
 import requests
 
+# -----------------------------
+# KEEP-ALIVE WEB SERVER (Render)
+# -----------------------------
+from flask import Flask
+import threading
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Liora wacht im Mondlicht."
+
+def run():
+    app.run(host='0.0.0.0', port=10000)
+
+def keep_alive():
+    t = threading.Thread(target=run)
+    t.start()
+
 # ============================================================
 # 🌙 L I O R A – Persönlichkeit
 # ============================================================
